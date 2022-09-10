@@ -13,3 +13,13 @@ const images = [
     alt: "Group of Horses Running",
   },
 ];
+
+const pictures = images.map((picture) => {
+  return `<li><img src="${picture.url}" alt="${picture.alt}" width="300px" height="200px"></li>`;
+});
+const gallery = document.querySelector("ul.gallery");
+gallery.style.display = "flex";
+gallery.style.listStyleType = "none";
+gallery.style.padding = "0";
+gallery.style.columnGap = "8px";
+gallery.insertAdjacentHTML("afterbegin", pictures.join(""));
