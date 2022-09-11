@@ -15,7 +15,7 @@ const images = [
 ];
 
 const pictures = images.map((picture) => {
-  return `<li><img src="${picture.url}" alt="${picture.alt}" width="300px" height="200px"></li>`;
+  return `<li><img src="${picture.url}" alt="${picture.alt}" height="300px"></li>`;
 });
 const gallery = document.querySelector("ul.gallery");
 gallery.style.display = "flex";
